@@ -2,6 +2,8 @@
 
 > [!WARNING]
 > I'm not a security engineer--this was half a learning exercise! `deus` is not recommended for production use, nor to replace `sudo` or `doas` without formal security review & scrutiny.
+>
+> If you identify any security issues, please email me at [hello@mbullington.net](mailto:hello@mbullington.net) instead of making a GitHub issue.
 
 ![Tuor meeting the Vala Ulmo - by Ted Nasmith](./deus.webp)
 
@@ -36,6 +38,8 @@ Full documentation can be found in `deus(1)`, `deus.conf(5)`.
 `deus` is simpler than `doas`.
 
 ## TODO
+
+- `deus` is vulnerable to TIOCSTI and TIOCLINUX IOCTLs made by malicious programs ran using `deus`. See [this issue](https://github.com/slicer69/doas/issues/110) for more details.
 
 - `deus` currently does not support timestamping; thus, you need to authenticate
   every time.
